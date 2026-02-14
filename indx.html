@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- تحسين محركات البحث SEO -->
+    <meta name="description" content="Green Awareness - منصة للتوعية البيئية وتحديات يومية للحفاظ على كوكبنا">
+    <meta name="keywords" content="بيئة, تدوير, بلاستيك, مياه, استدامة, توعية بيئية">
+    <meta name="author" content="Green Awareness Team">
+    
+    <title>Green Awareness - الوعي الأخضر</title>
+    
+    <!-- ربط ملف التنسيقات (CSS) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    
+    <!-- خطوط Google (مع دعم العربية) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- مكتبة أيقونات Font Awesome (اختياري) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Green Awareness Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/50x50/2e7d32/ffffff?text=GA'">
+            <span class="logo-text">Green Awareness</span>
+        </div>
+        
+        <div class="nav-controls">
+            <button id="themeToggle" class="icon-btn" aria-label="تغيير الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="langToggle" class="lang-btn">
+                <i class="fas fa-globe"></i>
+                English
+            </button>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero-bg.jpg');">
+        <div class="hero-content">
+            <h1>معاً نحو <span class="highlight">كوكب</span> أكثر اخضراراً</h1>
+            <p class="hero-description">انضم إلى مجتمعنا وابدأ رحلتك في الحفاظ على البيئة من خلال تحديات يومية بسيطة وممتعة</p>
+            
+            <!-- عداد التأثير الجماعي -->
+            <div class="impact-counter">
+                <h3>تأثير مجتمعنا حتى الآن:</h3>
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <i class="fas fa-trash-alt"></i>
+                        <span class="counter-number" id="plasticCounter">12,450</span>
+                        <span class="counter-label">زجاجة بلاستيك تم توفيرها</span>
+                    </div>
+                    <div class="counter-item">
+                        <i class="fas fa-tint"></i>
+                        <span class="counter-number" id="waterCounter">8,230</span>
+                        <span class="counter-label">لتر مياه تم توفيرها</span>
+                    </div>
+                    <div class="counter-item">
+                        <i class="fas fa-tree"></i>
+                        <span class="counter-number" id="treeCounter">156</span>
+                        <span class="counter-label">شجرة تم زراعتها</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نموذج الاشتراك السريع -->
+            <div class="signup-box" id="signupBox">
+                <h3>ابدأ الآن مجاناً</h3>
+                <form id="signupForm">
+                    <div class="input-group">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" placeholder="البريد الإلكتروني" required id="userEmail">
+                    </div>
+                    <button type="submit" class="cta-btn">
+                        <i class="fas fa-user-plus"></i>
+                     ابدأ رحلتك
+                    </button>
+                </form>
+                <p class="privacy-note">نحن نحترم خصوصيتك </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- تحديات سريعة -->
+    <section class="daily-challenges">
+        <div class="section-header">
+            <h2>تحديات اليوم <i class="fas fa-leaf"></i></h2>
+            <p class="section-subtitle">اختر تحدياً وابدأ الآن</p>
+        </div>
+        
+        <div class="challenges-grid">
+            <div class="challenge-card" id="challenge-water">
+                <div class="challenge-icon">
+                    <img src="assets/images/icons/water-icon.svg" alt="Water Challenge" onerror="this.src='https://via.placeholder.com/80x80/4caf50/ffffff?text=💧'">
+                </div>
+                <h4>تحدي المياه</h4>
+                <p class="challenge-desc">قلل وقت الاستحمام إلى 5 دقائق فقط</p>
+                <div class="challenge-stats">
+                    <span class="difficulty easy">سهل</span>
+                    <span class="points">+10 نقاط</span>
+                </div>
+                <div class="challenge-progress">
+                    <div class="progress-bar" style="width: 60%"></div>
+                </div>
+                <button class="complete-btn" onclick="completeChallenge('water')">
+                    <i class="fas fa-check-circle"></i>
+                    تم التحدي
+                </button>
+            </div>
+            
+            <div class="challenge-card" id="challenge-plastic">
+                <div class="challenge-icon">
+                    <img src="assets/images/icons/plastic-icon.svg" alt="Plastic Challenge" onerror="this.src='https://via.placeholder.com/80x80/ff9800/ffffff?text=🛍️'">
+                </div>
+                <h4>بدون بلاستيك</h4>
+                <p class="challenge-desc">استخدم كيس قماش بدلاً من البلاستيك</p>
+                <div class="challenge-stats">
+                    <span class="difficulty easy">سهل</span>
+                    <span class="points">+15 نقاط</span>
+                </div>
+                <div class="challenge-progress">
+                    <div class="progress-bar" style="width: 30%"></div>
+                </div>
+                <button class="complete-btn" onclick="completeChallenge('plastic')">
+                    <i class="fas fa-check-circle"></i>
+                    تم التحدي
+                </button>
+            </div>
+
+            <div class="challenge-card" id="challenge-recycle">
+                <div class="challenge-icon">
+                    <img src="assets/images/icons/recycle-icon.svg" alt="Recycle Challenge" onerror="this.src='https://via.placeholder.com/80x80/2196f3/ffffff?text=♻️'">
+                </div>
+                <h4>إعادة تدوير</h4>
+                <p class="challenge-desc">افصل المخلفات القابلة للتدوير</p>
+                <div class="challenge-stats">
+                    <span class="difficulty medium">متوسط</span>
+                    <span class="points">+20 نقاط</span>
+                </div>
+                <div class="challenge-progress">
+                    <div class="progress-bar" style="width: 45%"></div>
+                </div>
+                <button class="complete-btn" onclick="completeChallenge('recycle')">
+                    <i class="fas fa-check-circle"></i>
+                    تم التحدي
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- حقائق سريعة متحركة -->
+    <section class="facts-section">
+        <h2><i class="fas fa-lightbulb"></i> هل تعلم؟</h2>
+        <div class="facts-slider" id="factSlider">
+            <div class="fact-card active">
+                <i class="fas fa-quote-right"></i>
+                <p class="fact-text">🥤 زجاجة بلاستيك واحدة تحتاج <strong>450 سنة</strong> لتتحلل</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-quote-right"></i>
+                <p class="fact-text">🚿 توفير دقيقة واحدة من الاستحمام = <strong>10 لتر</strong> مياه</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-quote-right"></i>
+                <p class="fact-text">🌳 زراعة شجرة واحدة تنتج أكسجين يكفي <strong>لـ 4 أشخاص</strong></p>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn" onclick="prevFact()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="showFact(0)"></span>
+                <span class="dot" onclick="showFact(1)"></span>
+                <span class="dot" onclick="showFact(2)"></span>
+            </div>
+            <button class="slider-btn" onclick="nextFact()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- رسالة النجاح (مخفية افتراضياً) -->
+    <div id="successMessage" class="success-message" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <span></span>
+    </div>
+
+    <!-- زر العودة للأعلى -->
+    <button id="scrollToTop" class="scroll-top-btn" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ربط ملف JavaScript (يجب وضعه في نهاية body) -->
+    <script src="script.js"></script>
+</body>
+</html>
